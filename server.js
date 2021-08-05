@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const checkMiddleware = (req, res, next) => {
   const d = new Date();
-  if (d.getDay < 6 && 0 < d.getDay < 6 && 8 < d.getHours && 17 > d.getHours) {
+  if ((d.getDay() < 6) && (0 < d.getDay()) && (8 < d.getHours()) && (17 > d.getHours())) {
+ 
     next();
   } else {
+    
     res.render("notworking")
   }
 };
