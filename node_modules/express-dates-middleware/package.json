@@ -1,0 +1,33 @@
+{
+  "name": "express-dates-middleware",
+  "version": "1.0.0",
+  "description": "Express middleware for providing a common start date and end date",
+  "main": "express-dates-middleware.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattpker/express-dates-middleware"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "dates",
+    "date",
+    "api"
+  ],
+  "author": "Matt Atkinson <mattpker@gmail.com> (https://github.com/mattpker)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattpker/express-dates-middleware/issues"
+  },
+  "homepage": "https://github.com/mattpker/express-dates-middleware",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "moment": "^2.10.3"
+  }
+}

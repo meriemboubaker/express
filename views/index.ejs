@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <body class="w3-black">
+    <header><%- include('./partials/header'); %></header>
+
+    <div class="w3-padding-large" id="main">
+     
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo"><span class="w3-hide-small">ELLE</span> Store.</h1>
+
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img
+              src="https://mcdn.wallpapersafari.com/medium/89/83/G3FDbl.png"
+              style="width: 100%"
+            />
+            <div class="text"> <h1 style="font-weight:bolder;color: black;" class="w3-jumbo"><span class="w3-hide-small">2021 COLLECTION WOMEN</span> </h1></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img
+              src="https://wallpapercave.com/wp/wp1866271.jpg"
+              style="width: 100%"
+            />
+            <div class="text"> <h1 style="font-weight:bolder;color: black;" class="w3-jumbo"><span class="w3-hide-small">NEW MEN COLLECTION/COMING SOON.</span> </h1></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img
+              src="https://wallpapercave.com/wp/wp1866278.jpg"
+              style="width: 100%"
+            />
+            <div class="text"> <h1 style="font-weight:bolder;color: black;" class="w3-jumbo"><span class="w3-hide-small">SCARFS AND ACCESSORIES/COMING SOON.</span> </h1></div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </header>
+
+      <div class="w3-padding-64 w3-content" id="photos">
+        <h2 class="w3-text-light-grey">2021 Collection</h2>
+        <hr style="width: 200px" class="w3-opacity" />
+
+        <div class="w3-row-padding" style="margin: 0 -16px">
+          <div class="w3-half">
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943869054-21bhomecollectionimage7.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943864227-21bhomecollectionimage5.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943866099-21bhomecollectionimage6.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943869054-21bhomecollectionimage7.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="w3-half">
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943857004-21bhomecollectionimage1.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943859104-21bhomecollectionimage2.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943855955-21bhomecollectionimage3.jpg"
+              style="width: 100%"
+            />
+            <img
+              src="https://www.chanel.com/images/q_auto,f_auto,fl_lossy,dpr_auto/w_1600/FSH-1623943860784-21bhomecollectionimage4.jpg"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+      </div>
+
+      <footer><%- include('./partials/footer'); %></footer>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
